@@ -7,7 +7,7 @@ const bodyparser = require('body-parser');
 const https = require('https');
 let date_ob = new Date();
 app.use(bodyparser.urlencoded({extended:true}));
-app.listen(process.env.PORT || 3000,function(){ 
+app.listen(process.env.PORT || 3000,function(){
   console.log("server is up on port 3000");
 });
 app.get("/",function(req,res){
@@ -40,7 +40,7 @@ const options={
 };
 var request= https.request(url,options,function(response){
   response.on("data",function(data){
-    console.log(JSON.parse(data));
+    // console.log(JSON.parse(data));
 if (response.statusCode===200){
   res.sendFile(__dirname+"/success.html");
 
