@@ -33,10 +33,10 @@ const data={
 }]
 };
 const  jsondata=JSON.stringify(data);
-const url =" https://us14.api.mailchimp.com/3.0/lists/07d9807218 ";
+const url ="********* ";
 const options={
   method:"Post",
-  auth: "ahmad:2620ab80b24d60a1eba59dc10261c6ef-us14"
+  auth: "***********"
 };
 var request= https.request(url,options,function(response){
   response.on("data",function(data){
@@ -61,7 +61,4 @@ app.post("/failure",function(req,res)
 {
   res.redirect("/");
 });
-// api mailchimp
-// 2620ab80b24d60a1eba59dc10261c6ef-us14
-// list id=  07d9807218
-// heroku link = "https://calm-citadel-23241.herokuapp.com/"
+
